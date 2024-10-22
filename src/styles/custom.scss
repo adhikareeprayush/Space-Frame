@@ -65,6 +65,10 @@ $grid-breakpoints: (
   xxl: 1920px
 );
 
+// Backgrounds
+$bgSection1: #1C1C1C;
+$bgSection2: #181818;
+
 // 2. Import Bootstrap after variable overrides
 @import "bootstrap/scss/bootstrap";
 
@@ -77,3 +81,41 @@ $grid-breakpoints: (
 .section-padding {
   padding: $spacer * 4 0;
 }
+
+.bg-1{
+  background: $bgSection1;
+}
+
+.bg-2{
+  background: $bgSection2;
+}
+
+@media (max-width: 1440px) {
+  section{
+    padding: 84px 80px;
+  }
+}
+
+@media (max-width: 744px) {
+  section{
+    padding: 42px 27px;
+  }
+}
+
+@media (max-width: 375px) {
+  section{
+    padding: 28px 16px;
+  }
+}
+
+button,
+.btn{
+  padding: 16px 64px;
+}
+
+.background-icon{
+  background: rgba(28, 28, 28, 0.4);
+  backdrop-filter: blur(100px);
+  border-radius: calc(1.75 * $border-radius-lg); //28px = 1.75rem
+}
+

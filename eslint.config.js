@@ -27,7 +27,7 @@ export default [
           map: [
             ['@', './src']
           ],
-          extensions: ['.js', '.jsx', '.json']
+          extensions: ['.js', '.jsx', '.json', '.css', '.scss']
         }
       }
     },
