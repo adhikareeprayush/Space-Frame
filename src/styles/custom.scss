@@ -6,7 +6,7 @@ $secondary: #6c757d;
 $success: #28a745;
 $info: #17a2b8;
 $warning: #ffc107;
-$danger: #dc3545;
+$danger: rgba(228, 78, 89, 0.87);
 $light: #f8f9fa;
 $dark: #343a40;
 
@@ -21,7 +21,7 @@ $h6-font-size: 1rem; // 16px
 // Override heading font weights
 $headings-font-weight: 600;
 $headings-color: rgba(255, 255, 255, 0.85);
-$headings-font-family: "Arial", sans-serif;
+$headings-font-family: "Verdana", sans-serif;
 
 // Body settings
 $body-bg: #252424;
@@ -31,9 +31,12 @@ $font-size-base: 1rem;
 $line-height-base: 1.5;
 
 // Border radius
-$border-radius: 1.625rem; // 26px
+$border-radius: 0.5rem; // 8px
 $border-radius-lg: 1rem; // 16px
-$border-radius-sm: .25rem; // 3px
+$border-radius-sm: .25rem; // 4px
+
+// Buttons
+$button-font-family: "Nunito Regular", sans-serif;
 
 // Spacing
 $spacer: 1rem;
@@ -68,6 +71,31 @@ $grid-breakpoints: (
 // Backgrounds
 $bgSection1: #1C1C1C;
 $bgSection2: #181818;
+
+// Badges
+$badge-font-size:   12px;                
+$badge-font-weight: 400;           
+$badge-color: rgba(168, 167, 167, 1);          
+$badge-padding-y: 5px;             
+$badge-padding-x: 5px;              
+$badge-border-radius: 3px;
+
+// Card
+$card-bg: rgba(28, 28, 28, 1);
+$card-border-width: 0.3px;
+$card-border-color: rgba(35, 35, 35, 1);
+$card-border-radius: $border-radius-lg; 
+$card-title-color: $body-color;
+
+
+// Inputs
+$input-btn-padding-x: 1rem;
+$input-btn-font-size: 12px;
+$input-btn-font-weight: 400;
+$input-btn-color: rgba(168, 167, 167, 1);
+// $input-btn-line-height: 15.4px;
+$input-btn-border-width: 1px;
+
 
 // 2. Import Bootstrap after variable overrides
 @import "bootstrap/scss/bootstrap";
@@ -111,6 +139,11 @@ $bgSection2: #181818;
 button,
 .btn{
   padding: 16px 64px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(47, 47, 54, 1);
+  color: $body-color;
+  outline: none;
+  font-family: $button-font-family;
 }
 
 .background-icon{
@@ -119,3 +152,41 @@ button,
   border-radius: calc(1.75 * $border-radius-lg); //28px = 1.75rem
 }
 
+hr{
+  border: 1px solid rgba(0, 0, 0, 0.2)
+}
+
+input{
+  background-color: rgba(53, 52, 52, 1);
+  border: 1px solid rgba(32, 32, 32, 1);
+  font-family: "Nunito Regular", sans-serif;
+  height: 60px;
+  padding: 0 16px;
+  color: $input-btn-color;
+  outline:none;
+  border-radius: 10px;
+  width: 583px;
+  max-width: 100%;
+}
+
+input:focus{
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.btn-secondary{
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  color:white;
+  text-align: center;
+  border-radius: $border-radius;
+}
+
+form button,
+form .btn,
+form input{
+  width: 100% !important;
+}
+
+.badge{
+  max-width: fit-content;
+}
