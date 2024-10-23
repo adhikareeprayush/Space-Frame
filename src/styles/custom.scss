@@ -26,7 +26,7 @@ $headings-font-family: "Verdana", sans-serif;
 // Body settings
 $body-bg: #252424;
 $body-color: rgba(255, 255, 255, 0.75);
-$font-family-base: "Verdana", Arial, sans-serif;
+$font-family-base: "Verdana", sans-serif;
 $font-size-base: 1rem;
 $line-height-base: 1.5;
 
@@ -93,9 +93,10 @@ $input-btn-padding-x: 1rem;
 $input-btn-font-size: 12px;
 $input-btn-font-weight: 400;
 $input-btn-color: rgba(168, 167, 167, 1);
-// $input-btn-line-height: 15.4px;
 $input-btn-border-width: 1px;
 
+// Text Muted
+$text-muted: rgba(255, 255, 255, 0.3);
 
 // 2. Import Bootstrap after variable overrides
 @import "bootstrap/scss/bootstrap";
@@ -143,7 +144,7 @@ button,
   background: rgba(47, 47, 54, 1);
   color: $body-color;
   outline: none;
-  font-family: $button-font-family;
+  font-family: "Nunito Regular", sans-serif;
 }
 
 .background-icon{
@@ -189,4 +190,143 @@ form input{
 
 .badge{
   max-width: fit-content;
+}
+
+.text-muted{
+  text-decoration: line-through;
+  font-family: "Nunito Regular", sans-serif;
+  font-size: 12px;
+  line-height: 21px;
+  padding:0px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  outline:none;
+  background: transparent;
+  height: 16px;
+  padding:0px;
+  border:0px;
+  overflow: visible;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  margin:-2px;
+  padding:0px;
+  height: 20px;
+  background: rgba(64, 69, 79, 1);
+  border-radius: 50%;
+  cursor: pointer; 
+}
+
+input[type="range"]::-webkit-slider-runnable-track{
+  background: rgba(255, 255, 255, 0.54);
+  border-radius: 1rem;
+  outline: none;
+  height: 16px;
+  width: 100%;
+  }
+
+
+label[for="range"]{
+  font-family: "Nunito Regular", sans-serif;
+  font-size: 12px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+label span{
+  font-family: "Nunito Regular", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
+
+/* General input range styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  background: transparent;
+  height: 12px;
+  padding: 0;
+  border: 0;
+  overflow-y: visible;
+  position: relative;
+  width: 100%;
+}
+
+/* Style for WebKit browsers (Chrome, Safari) */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 12px;
+  border-radius: 1rem;
+  outline: none;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.54);
+}
+
+input[type="range"]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 12px;
+  background-color: rgba(89, 89, 89, 1);
+  width: var(--value-percent);
+  transition: width 0.2s;
+  border-radius: 1rem;
+  border-top-right-radius: var(--track-border-radius) !important;
+  border-bottom-right-radius: var(--track-border-radius) !important;
+  z-index: 1;
+}
+
+/* Style the thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  margin: -2px; /* Center thumb */
+  background: rgba(64, 69, 79, 1); /* Using CSS variable */
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 2; /* Thumb should be above the track */
+}
+
+/* For Firefox */
+input[type="range"]::-moz-range-track {
+  height: 12px;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.54);
+  position: relative;
+}
+
+input[type="range"]::-moz-range-progress {
+  background-color: rgba(64, 69, 79, 1);
+  height: 100%;
+}
+
+/* For Edge and IE */
+input[type="range"]::-ms-track {
+  height: 12px;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background-color: rgba(64, 69, 79, 1);
+}
+
+input[type="range"]::-ms-fill-upper {
+  background-color: rgba(255, 255, 255, 0.54);
 }
