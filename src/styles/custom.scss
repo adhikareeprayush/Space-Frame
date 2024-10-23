@@ -1,7 +1,7 @@
 // Custom.scss
 
 // 1. Override Bootstrap's variables
-$primary: red;
+$primary: rgba(136, 129, 234, 1);
 $secondary: #6c757d;
 $success: #28a745;
 $info: #17a2b8;
@@ -119,32 +119,42 @@ $text-muted: rgba(255, 255, 255, 0.3);
   background: $bgSection2;
 }
 
+section{
+  display: flex;
+  flex-direction: column;
+  gap:40px;
+}
+
 @media (max-width: 1440px) {
   section{
     padding: 84px 80px;
+    gap:40px;
   }
 }
 
 @media (max-width: 744px) {
   section{
     padding: 42px 27px;
+    gap:36px;
   }
 }
 
 @media (max-width: 375px) {
   section{
     padding: 28px 16px;
+    gap:26px;
   }
 }
 
 button,
 .btn{
   padding: 16px 64px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
   background: rgba(47, 47, 54, 1);
   color: $body-color;
   outline: none;
   font-family: "Nunito Regular", sans-serif;
+  border-radius: 5px;
+  font-weight: 700;
 }
 
 .background-icon{
@@ -177,7 +187,7 @@ input:focus{
 .btn-secondary{
   border: 1px solid rgba(255, 255, 255, 0.6);
   background-color: transparent;
-  color:white;
+  color: rgba(255, 255, 255, 0.75);
   text-align: center;
   border-radius: $border-radius;
 }
@@ -329,4 +339,28 @@ input[type="range"]::-ms-fill-lower {
 
 input[type="range"]::-ms-fill-upper {
   background-color: rgba(255, 255, 255, 0.54);
+}
+
+.image-container{
+  padding:11px;
+}
+
+@media(max-width: 744px){
+  .image-container{
+    padding: 11px;
+  }
+}
+
+@media (max-width: 375px) {
+  .image-container{
+    padding: 31px 46px;
+  }
+}
+
+.btn-primary{
+  background: $primary;
+  border: 1px solid $primary;
+  color: white;
+  height: fit-content;
+  padding: 19px 0px;
 }

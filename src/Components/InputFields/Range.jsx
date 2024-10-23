@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const Range = () => {
     const [value, setValue] = useState(0); // State to hold the slider value
